@@ -1,0 +1,5 @@
+{
+  "name": "SQL Formatter",
+  "description": "A web app that formats SQL queries with customizable font and background colors, inspired by the CodeSnap extension. Paste or type SQL, format it, and customize the appearance.",
+  "requestFramePermissions": []
+}
