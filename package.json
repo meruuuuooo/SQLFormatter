@@ -9,14 +9,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "html-to-image": "^1.11.11",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "sql-formatter": "^15.6.9",
-    "html-to-image": "^1.11.11"
+    "sql-formatter": "^15.6.9"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",
     "@vitejs/plugin-react": "^5.0.0",
+    "gh-pages": "^6.3.0",
     "typescript": "~5.8.2",
     "vite": "^6.2.0"
   }
