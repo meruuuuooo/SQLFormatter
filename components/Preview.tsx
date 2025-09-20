@@ -7,9 +7,11 @@ interface PreviewProps {
     backgroundColor: string;
     fontFamily: string;
     fontSize: number;
+    isBold: boolean;
+    showLineNumbers: boolean;
 }
 
-const Preview: React.FC<PreviewProps> = ({ formattedSql, fontColor, backgroundColor, fontFamily, fontSize }) => {
+const Preview: React.FC<PreviewProps> = ({ formattedSql, fontColor, backgroundColor, fontFamily, fontSize, isBold, showLineNumbers }) => {
     const previewRef = useRef<HTMLDivElement>(null);
     const [copyTextStatus, setCopyTextStatus] = useState<'idle' | 'copied'>('idle');
     const [copyPngStatus, setCopyPngStatus] = useState<'idle' | 'copied'>('idle');
@@ -110,16 +112,21 @@ const Preview: React.FC<PreviewProps> = ({ formattedSql, fontColor, backgroundCo
                     fontSize: `${fontSize}px`,
                 }}
             >
-                {/* Line numbers column */}
-                <div className="text-right select-none pr-4" style={{ color: fontColor, opacity: 0.5 }}>
-                    {lines.map((_, index) => (
-                        <div key={index}>{index + 1}</div>
-                    ))}
-                </div>
+                {/* Line numbers column - conditionally rendered */}
+                {showLineNumbers && (
+                    <div className="text-right select-none pr-4" style={{ color: fontColor, opacity: 0.5 }}>
+                        {lines.map((_, index) => (
+                            <div key={index}>{index + 1}</div>
+                        ))}
+                    </div>
+                )}
                 {/* Code column */}
                 <pre
                   className="whitespace-pre"
-                  style={{ color: fontColor }}
+                  style={{ 
+                    color: fontColor,
+                    fontWeight: isBold ? 'bold' : 'normal'
+                  }}
                 >
                     <code>
                         {formattedSql}

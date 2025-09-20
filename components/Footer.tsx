@@ -3,7 +3,7 @@ import React from 'react';
 const Footer: React.FC = () => {
     const githubUrl = "https://github.com/meruuuuooo";
     const emailAddress = "mailem.meldavid@gmail.com";
-    const qrCodeUrl = "";
+    const qrCodeUrl = "/qrcode.png";
   
 
     return (
@@ -13,6 +13,7 @@ const Footer: React.FC = () => {
                     <div className="flex flex-col items-center md:items-start space-y-2">
                         <h4 className="font-semibold text-gray-300">SQL Formatter</h4>
                         <p className="text-sm">&copy; {new Date().getFullYear()}. All Rights Reserved.</p>
+                        <p className="text-xs text-gray-500">Made by meru using Google Builder AI</p>
                     </div>
 
                     <div className="flex justify-center space-x-6">

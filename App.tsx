@@ -32,6 +32,8 @@ const App: React.FC = () => {
     const [backgroundColor, setBackgroundColor] = useState<string>('#1f2937'); // gray-800
     const [fontFamily, setFontFamily] = useState<string>('Courier New');
     const [fontSize, setFontSize] = useState<number>(14);
+    const [isBold, setIsBold] = useState<boolean>(false);
+    const [showLineNumbers, setShowLineNumbers] = useState<boolean>(true);
 
     const handleFormat = useCallback(() => {
         try {
@@ -68,6 +70,10 @@ const App: React.FC = () => {
                             setFontFamily={setFontFamily}
                             fontSize={fontSize}
                             setFontSize={setFontSize}
+                            isBold={isBold}
+                            setIsBold={setIsBold}
+                            showLineNumbers={showLineNumbers}
+                            setShowLineNumbers={setShowLineNumbers}
                         />
                     </div>
                     <div>
@@ -77,6 +83,8 @@ const App: React.FC = () => {
                             backgroundColor={backgroundColor}
                             fontFamily={fontFamily}
                             fontSize={fontSize}
+                            isBold={isBold}
+                            showLineNumbers={showLineNumbers}
                         />
                     </div>
                 </main>
