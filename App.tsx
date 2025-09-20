@@ -28,8 +28,8 @@ LIMIT 10;`;
 const App: React.FC = () => {
     const [rawSql, setRawSql] = useState<string>(initialSql);
     const [formattedSql, setFormattedSql] = useState<string>('');
-    const [fontColor, setFontColor] = useState<string>('#e5e7eb'); // gray-200
-    const [backgroundColor, setBackgroundColor] = useState<string>('#1f2937'); // gray-800
+    const [fontColor, setFontColor] = useState<string>('#000000'); // gray-200
+    const [backgroundColor, setBackgroundColor] = useState<string>('#FFFFFF'); // gray-800
     const [fontFamily, setFontFamily] = useState<string>('Courier New');
     const [fontSize, setFontSize] = useState<number>(14);
     const [isBold, setIsBold] = useState<boolean>(false);

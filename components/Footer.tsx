@@ -3,7 +3,7 @@ import React from 'react';
 const Footer: React.FC = () => {
     const githubUrl = "https://github.com/meruuuuooo";
     const emailAddress = "mailem.meldavid@gmail.com";
-    const qrCodeUrl = "/qrcode.png";
+    const qrCodeUrl = "qr.png";
   
 
     return (
