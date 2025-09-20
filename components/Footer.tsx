@@ -3,7 +3,6 @@ import React from 'react';
 const Footer: React.FC = () => {
     const githubUrl = "https://github.com/meruuuuooo";
     const emailAddress = "mailem.meldavid@gmail.com";
-    const qrCodeUrl = "/qrcode.png";
   
 
     return (
@@ -33,18 +32,6 @@ const Footer: React.FC = () => {
                         >
                             Send Feedback
                         </a>
-                    </div>
-
-                    <div className="flex flex-col items-center md:items-end space-y-2">
-                        <h4 className="font-semibold text-gray-300">Enjoy the app?</h4>
-                        <p className="text-sm">Scan to buy me a coffee!</p>
-                        <img
-                            src={qrCodeUrl}
-                            alt="GCash QR Code for donation"
-                            className="mt-2 rounded-lg bg-white p-1"
-                            width="120"
-                            height="120"
-                        />
                     </div>
                 </div>
             </div>
