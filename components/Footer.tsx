@@ -3,8 +3,8 @@ import React from 'react';
 const Footer: React.FC = () => {
     const githubUrl = "https://github.com/meruuuuooo";
     const emailAddress = "mailem.meldavid@gmail.com";
-    const qrCodeUrl = "qr.png";
-  
+    // Use import.meta.env.BASE_URL to get the correct base path for deployment
+    const qrCodeUrl = `${import.meta.env.BASE_URL}qr.png`;
 
     return (
         <footer className="w-full mt-16 py-8 border-t border-gray-800">
